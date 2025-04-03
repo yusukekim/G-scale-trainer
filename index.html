@@ -9,8 +9,20 @@
 <body>
   <h1>🎸 Guitar Scale Trainer</h1>
 
+  <h2>スケールを選んでね🎸</h2>
+  <select id="scaleSelect">
+    <option value="C_MAJOR">Cメジャー</option>
+    <option value="G_MAJOR">Gメジャー</option>
+    <option value="A_MINOR">Aマイナー</option>
+  </select>
+
   <!-- 指板 -->
   <div class="fretboard" id="fretboard"></div>
+
+  <!-- 指板ラッパーを追加 -->
+  <div id="fretboard-container">
+    <div class="fretboard" id="fretboard"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>

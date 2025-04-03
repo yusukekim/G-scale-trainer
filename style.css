@@ -6,34 +6,36 @@ body {
   }
   
   .fretboard {
-    display: grid;
-    grid-template-columns: repeat(13, 60px); /* 12フレット + ナット */
+    display: flex;
+    flex-direction: column;
     gap: 4px;
     justify-content: center;
     margin-top: 20px;
   }
   
   .string {
-    display: contents; /* フレットを横一列で */
+    display: grid;
+    grid-template-columns: repeat(14, 60px); /* ← 13フレット + ラベル1個分 */
   }
   
   .fret {
-    width: 60px;
-    height: 40px;
-    background: #fff;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     font-weight: bold;
-    cursor: pointer;
-    user-select: none;
+  }
+
+  .fret.note {
+    background: #d0eaff; /* 青 */
   }
   
   .fret.root {
-    background: #ffcccb;
+    background: #ffcccb; /* ピンク → こっちをあとに書くことで勝つ！ */
   }
-  
-  .fret.note {
-    background: #d0eaff;
+
+  .fretboard {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    margin: 20px auto; /* ←中央に寄せる */
+    width: max-content; /* 中身に合わせた幅だけ確保 */
   }
